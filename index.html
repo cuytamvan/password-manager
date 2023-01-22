@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password manager</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <form class="form flex" id="form">
+      <div class="w-100">
+        <h1 class="title">Password Manager</h1>
+      </div>
+      <div class="form-input w-33">
+        <label>Title</label>
+        <input type="text" class="input" id="title" />
+      </div>
+
+      <div class="form-input w-33">
+        <label>Username</label>
+        <input type="text" class="input" id="username" />
+      </div>
+
+      <div class="form-input w-33">
+        <label>Password</label>
+        <input type="text" class="input" id="password" />
+      </div>
+
+      <div class="form-input w-100">
+        <label>Deskripsi</label>
+        <textarea class="input" id="description" rows="5"></textarea>
+      </div>
+
+      <div class="form-input w-100 text-right">
+        <button type="button" class="btn" onclick="resetForm()">Reset</button>
+        <button id="save" class="btn">Simpan</button>
+      </div>
+    </form>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <td>#</td>
+          <td>Title</td>
+          <td>Username</td>
+          <td>Password</td>
+          <td>Deskripsi</td>
+        </tr>
+      </thead>
+
+      <tbody id="dataTable"></tbody>
+    </table>
+
+    <script src="main.js"></script>
+  </body>
+</html>
