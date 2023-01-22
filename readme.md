@@ -7,8 +7,8 @@ Web ini hanya menggunakan html, css, dan javascript, jika tidak percaya akan cod
 <table>
   <thead>
     <tr>
-      <td>Username</td>
-      <td>Password</td>
+      <th>Username</th>
+      <th>Password</th>
     </tr>
   </thead>
   <tbody>
