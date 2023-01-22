@@ -91,7 +91,13 @@ label {
   font-size: .8em;
 }
 
+.table thead tr td {
+  border-bottom: 2px solid #ddd;
+}
+
 .table tr td {
   padding: 5px 10px;
   border: thin solid #ddd;
+  border-radius: 20px;
+  margin: 10px;
 }
