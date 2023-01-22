@@ -67,6 +67,16 @@ label {
   cursor: pointer;
 }
 
+.btn.btn-warning {
+  background-color: #ffedd5;
+  color: #f97316;
+}
+
+.btn.btn-danger {
+  background-color: #fce7f3;
+  color: #ec4899;
+}
+
 .title {
   color: #6366f1;
   font-weight: 500;

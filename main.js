@@ -11,6 +11,8 @@ function resetForm() {
   username.value = '';
   password.value = '';
   description.value = '';
+
+  selectedIndex = null;
 }
 
 function submitForm(e) {
@@ -51,8 +53,8 @@ function renderData() {
     data.forEach((r, i) => {
       html += `<tr>
       <td>
-        <button onClick="editData(${i})">Edit</button>
-        <button onClick="removeData(${i})">Remove</button>
+        <button onClick="editData(${i})" class="btn btn-warning">Edit</button>
+        <button onClick="removeData(${i})" class="btn btn-danger">Remove</button>
       </td>
       <td>${r.title}</td>
       <td>${r.username}</td>
