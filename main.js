@@ -18,6 +18,8 @@ function login(e) {
   if (usernameLogin === username.value && passwordLogin === password.value) {
     document.getElementById('loginSection').style.display = 'none';
     document.getElementById('passwordManagerSection').style.display = 'block';
+  } else {
+    alert('password salah ngabs!!');
   }
 }
 
