@@ -1,3 +1,6 @@
+const usernameLogin = 'demo';
+const passwordLogin = 'demo';
+
 const title = document.getElementById('title');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
@@ -6,6 +9,18 @@ const description = document.getElementById('description');
 let data = [];
 let selectedIndex = null;
 
+function login(e) {
+  e.preventDefault();
+
+  const username = document.getElementById('usernameLogin');
+  const password = document.getElementById('passwordLogin');
+
+  if (usernameLogin === username.value && passwordLogin === password.value) {
+    document.getElementById('loginSection').style.display = 'none';
+    document.getElementById('passwordManagerSection').style.display = 'block';
+  }
+}
+
 function resetForm() {
   title.value = '';
   username.value = '';
@@ -13,6 +28,17 @@ function resetForm() {
   description.value = '';
 
   selectedIndex = null;
+}
+
+function generatePassword(len) {
+  let res = '';
+  let char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_)(';
+
+  for (let i = 0; i < len; i++) {
+    res += char.charAt(Math.floor(Math.random() * char.length));
+  }
+
+  password.value = res;
 }
 
 function submitForm(e) {
@@ -88,4 +114,5 @@ function editData(index) {
   description.value = selectedData.description;
 }
 
+document.getElementById('loginForm').addEventListener('submit', login);
 document.getElementById('form').addEventListener('submit', submitForm);
